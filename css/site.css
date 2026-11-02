@@ -1,6 +1,5 @@
-/* DataGuru — daylight hard court.
-   Light court blue, dark text, deeper blue accent. Newsreader for titles.
-   Brass is unused: it does not hold contrast on this court. */
+/* DataGuru — Brass Ledger.
+   Indigo ink, warm paper, one brass signal. Newsreader for titles. */
 
 @font-face {
   font-family: "Newsreader";
@@ -51,21 +50,21 @@
 }
 
 :root {
-  --court: #7eb8e4;
-  --court-deep: #68aad8;
-  --card: #f4f9fc;
-  --ink: #102033;
-  --muted: #1c3348;
-  --line: rgba(255, 255, 255, 0.86);
-  --line-ink: rgba(16, 32, 51, 0.16);
-  --line-strong: rgba(16, 32, 51, 0.28);
-  --accent: #0a2748;
-  --on-accent: #f4f9fc;
-  --error: #5c1814;
+  --court: #10141c;
+  --court-deep: #171d29;
+  --card: #1c2433;
+  --ink: #f4f0e6;
+  --muted: #d4cdc0;
+  --line: rgba(244, 240, 230, 0.14);
+  --line-ink: rgba(244, 240, 230, 0.14);
+  --line-strong: rgba(244, 240, 230, 0.32);
+  --accent: #e2b45c;
+  --on-accent: #10141c;
+  --error: #ffc9bc;
   --serif: "Newsreader", "Iowan Old Style", Palatino, Georgia, serif;
   --sans: "Outfit", "Avenir Next", "Segoe UI", sans-serif;
   --header: 4.25rem;
-  color-scheme: light;
+  color-scheme: dark;
 }
 
 *,
@@ -316,7 +315,7 @@ main:focus {
 }
 
 .hero-wrap {
-  background: radial-gradient(ellipse 55% 80% at 100% 0%, rgba(255, 255, 255, 0.45), transparent 58%);
+  background: radial-gradient(ellipse 55% 80% at 100% 0%, rgba(226, 180, 92, 0.16), transparent 58%);
 }
 
 .hero {
@@ -376,13 +375,13 @@ h1 em {
 }
 
 .text-link {
-  color: var(--accent);
+  color: var(--ink);
   font-weight: 500;
   text-underline-offset: 0.2em;
 }
 
 .text-link:hover {
-  color: var(--ink);
+  color: var(--accent);
 }
 
 .fine {
@@ -441,7 +440,9 @@ h1 em {
 .sample {
   position: relative;
   border: 1px solid var(--line-strong);
-  background: var(--card);
+  background:
+    linear-gradient(180deg, rgba(226, 180, 92, 0.14), rgba(226, 180, 92, 0) 32%),
+    var(--card);
   padding: 1.45rem 1.3rem 1.15rem;
 }
 
@@ -663,7 +664,7 @@ h1 em {
   aspect-ratio: 16 / 10;
   overflow: hidden;
   border: 1px dashed var(--line-strong);
-  background: rgba(255, 255, 255, 0.28);
+  background: var(--card);
 }
 
 .venue-frame img {
@@ -711,7 +712,7 @@ h1 em {
 
 .plate:hover,
 .plate:focus-within {
-  background: rgba(255, 255, 255, 0.28);
+  background: rgba(244, 240, 230, 0.04);
 }
 
 .plate:has(a:focus-visible) {
@@ -774,7 +775,7 @@ h1 em {
 }
 
 .sport-index a:hover {
-  background: rgba(255, 255, 255, 0.28);
+  background: rgba(244, 240, 230, 0.04);
   color: var(--accent);
 }
 
@@ -851,14 +852,14 @@ h1 em {
 }
 
 .close .button {
-  background: var(--card);
+  background: #10141c;
   color: var(--ink);
   flex: 0 0 auto;
 }
 
 .close .button:hover {
-  background: var(--court);
-  color: var(--ink);
+  background: var(--ink);
+  color: #10141c;
 }
 
 .page-head {
@@ -1089,7 +1090,7 @@ textarea {
   padding: 0.75rem 0.8rem;
   border: 1px solid var(--line-strong);
   border-radius: 0;
-  background: var(--card);
+  background: var(--court);
   color: var(--ink);
   font: inherit;
   font-size: 1rem;
@@ -1110,7 +1111,7 @@ textarea:focus-visible {
 input:-webkit-autofill {
   -webkit-text-fill-color: var(--ink);
   caret-color: var(--ink);
-  box-shadow: 0 0 0 1000px var(--card) inset;
+  box-shadow: 0 0 0 1000px var(--court) inset;
 }
 
 .checks {
@@ -1195,7 +1196,7 @@ input:-webkit-autofill {
   margin: 0.75rem 0 1rem;
   padding: 0.85rem 0.9rem;
   border: 1px solid var(--line-strong);
-  background: #e7f4fb;
+  background: var(--court);
   color: var(--ink);
   font-family: var(--sans);
   font-size: 0.95rem;
