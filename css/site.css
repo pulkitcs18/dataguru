@@ -365,6 +365,54 @@ h1 em {
   font-size: 0.92rem;
 }
 
+.coverage {
+  margin-top: 1.45rem;
+}
+
+.coverage .eyebrow {
+  margin-bottom: 0.35rem;
+}
+
+.level-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.85rem 1.25rem;
+  list-style: none;
+  margin: 0.85rem 0 0;
+  padding: 0;
+}
+
+.sport .level-list {
+  margin: 0.2rem 0 1.15rem;
+  padding: 0;
+  list-style: none;
+}
+
+.level-name,
+.level-list a {
+  font-family: var(--serif);
+  font-size: 1.28rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  color: var(--paper);
+  text-decoration: none;
+}
+
+.level-list a:hover {
+  color: var(--brass);
+}
+
+.level-note {
+  display: block;
+  margin-top: 0.15rem;
+  color: var(--brass);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
 .sample {
   position: relative;
   border: 1px solid var(--line-strong);
@@ -445,6 +493,12 @@ h1 em {
   line-height: 1;
 }
 
+.score-sets {
+  display: inline-flex;
+  gap: 0.65rem;
+  font-size: 1.7rem;
+}
+
 .clock {
   margin: 0 0 0.85rem;
   color: var(--brass);
@@ -461,7 +515,7 @@ h1 em {
 
 .event-list li {
   display: grid;
-  grid-template-columns: 3rem 1.1fr 1.3fr;
+  grid-template-columns: 4.25rem 0.8fr 1.2fr;
   gap: 0.5rem;
   padding: 0.55rem 0;
   border-bottom: 1px solid var(--line);
@@ -1188,7 +1242,7 @@ input:-webkit-autofill {
   }
 
   .event-list li {
-    grid-template-columns: 2.6rem 1fr;
+    grid-template-columns: 4.25rem 1fr;
   }
 
   .event-list li span:last-child {
