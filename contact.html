@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Request data — DataGuru</title>
+  <meta name="description" content="Request sports scores and sports data from DataGuru. The form opens an email to the contact address with your note prepared. Nothing is stored on this site.">
+  <meta name="theme-color" content="#10141c">
+  <link rel="icon" href="favicon.ico" sizes="32x32">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="fonts/newsreader-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/outfit-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+  <a class="skip" href="#content">Skip to content</a>
+  <header class="site-header">
+    <div class="shell bar">
+      <a class="brand" href="index.html">
+        <img class="brand-mark" src="assets/mark.svg" width="28" height="28" alt="">
+        <span class="brand-word">DataGuru</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="when-closed">Menu</span>
+        <span class="when-open">Close</span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Primary">
+        <a href="sports.html">Sports</a>
+        <a href="products.html">Products</a>
+        <a href="how-it-works.html">How it works</a>
+        <a class="nav-request" href="contact.html" aria-current="page">Request data</a>
+      </nav>
+    </div>
+  </header>
+  <main id="content" tabindex="-1">
+    <div class="shell">
+      <div class="page-head">
+        <p class="eyebrow">Contact</p>
+        <h1>Request data.</h1>
+        <p class="lede">The form opens your email client with a message to DataGuru. We do not receive the form on a server, and we do not store it on this site. We read the note and reply with a scope or with a question. This page does not promise a response time.</p>
+        <!-- Contact address: js/site.js CONTACT_EMAIL -->
+        <p class="plain-mail">Or write directly: <a class="email-link" id="plain-email" data-contact-email></a></p>
+      </div>
+      <div class="form-layout">
+        <form id="request" data-request-form action="contact.html" method="get">
+          <div class="form-grid">
+            <div>
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" autocomplete="name" maxlength="120" required>
+            </div>
+            <div>
+              <label for="email">Work email</label>
+              <input id="email" name="email" type="email" autocomplete="email" inputmode="email" autocapitalize="none" spellcheck="false" maxlength="120" required>
+            </div>
+            <div class="full">
+              <label for="company">Company</label>
+              <input id="company" name="company" type="text" autocomplete="organization" maxlength="160" required>
+            </div>
+            <fieldset class="full" data-sports-field aria-describedby="sports-hint">
+              <legend>Sports of interest</legend>
+              <p class="hint" id="sports-hint">Select every sport this request should cover.</p>
+              <div class="checks">
+                <label><input type="checkbox" name="sports" value="Football" data-slug="football"> Football</label>
+                <label><input type="checkbox" name="sports" value="Tennis" data-slug="tennis"> Tennis</label>
+                <label><input type="checkbox" name="sports" value="American football" data-slug="american-football"> American football</label>
+                <label><input type="checkbox" name="sports" value="Ice hockey" data-slug="ice-hockey"> Ice hockey</label>
+                <label><input type="checkbox" name="sports" value="Basketball" data-slug="basketball"> Basketball</label>
+                <label><input type="checkbox" name="sports" value="Baseball" data-slug="baseball"> Baseball</label>
+                <label><input type="checkbox" name="sports" value="Cricket" data-slug="cricket"> Cricket</label>
+                <label><input type="checkbox" name="sports" value="Rugby" data-slug="rugby"> Rugby</label>
+                <label><input type="checkbox" name="sports" value="Golf" data-slug="golf"> Golf</label>
+                <label><input type="checkbox" name="sports" value="Motorsport" data-slug="motorsport"> Motorsport</label>
+                <label><input type="checkbox" name="sports" value="Other major sports" data-slug="other"> Other major sports</label>
+              </div>
+              <p class="field-error" id="sports-error" data-sports-error role="alert" hidden>Select at least one sport.</p>
+            </fieldset>
+            <div class="full">
+              <label for="message">Message</label>
+              <p class="hint" id="message-hint">What the data will support, which competitions you have in mind, and how fresh it needs to be.</p>
+              <textarea id="message" name="message" maxlength="1200" required aria-describedby="message-hint"></textarea>
+            </div>
+            <div class="full">
+              <p class="hint">All fields are required. Submitting uses your email application. DataGuru does not receive this form on the website.</p>
+              <button class="button" type="submit">Prepare email request</button>
+            </div>
+          </div>
+          <div class="request-status" data-request-status hidden tabindex="-1" role="status" aria-live="polite">
+            <h2>Email ready</h2>
+            <p>Your email client should open a message to <a class="email-link" data-contact-email></a>. If it does not, use the prepared link. This page did not send or store the note.</p>
+            <p>Subject: <span data-request-subject></span></p>
+            <pre class="letter" data-request-summary></pre>
+            <a class="button" data-open-mailto href="contact.html">Open the prepared email</a>
+          </div>
+        </form>
+        <aside class="aside-card">
+          <h2>What happens next</h2>
+          <p>We reply with competitions, fields, format, and cadence — or with a question, or with a no. Sample scoreboards on this site are layouts, not current results.</p>
+          <p><a class="text-link" href="how-it-works.html">See how a request moves</a></p>
+        </aside>
+      </div>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="shell">
+      <p class="independence">DataGuru is an independent data company and does not claim affiliation with Genius Sports, Sportradar, Betradar, or any league.</p>
+      <div class="footer-grid">
+        <div>
+          <p class="footer-name">DataGuru</p>
+          <p class="footer-tag">Scores and sports data for professional desks.</p>
+          <a class="email-link" data-contact-email></a>
+        </div>
+        <nav class="footer-nav" aria-label="Footer">
+          <a href="index.html">Home</a>
+          <a href="sports.html">Sports</a>
+          <a href="products.html">Products</a>
+          <a href="how-it-works.html">How it works</a>
+          <a href="contact.html" aria-current="page">Request data</a>
+        </nav>
+      </div>
+      <p class="copyright">© 2026 DataGuru</p>
+      <noscript>
+        <p class="noscript-note">Enable JavaScript to show the contact address and to prepare a request email. The address is a single constant in the site script.</p>
+      </noscript>
+    </div>
+  </footer>
+  <script src="js/site.js"></script>
+</body>
+</html>
