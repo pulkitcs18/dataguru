@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Request data — DataGuru</title>
-  <meta name="description" content="Request sports scores and sports data from DataGuru. The form opens an email to the contact address with your note prepared. Nothing is stored on this site.">
-  <meta name="theme-color" content="#10141c">
+  <meta name="description" content="Request sports data from DataGuru. The form shows your letter on the page first. A second click opens it in your mail app. Nothing is stored on this site.">
+  <meta name="theme-color" content="#7eb8e4">
   <link rel="icon" href="favicon.ico" sizes="32x32">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="fonts/newsreader-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
@@ -37,12 +37,14 @@
       <div class="page-head">
         <p class="eyebrow">Contact</p>
         <h1>Request data.</h1>
-        <p class="lede">The form opens your email client with a message to DataGuru. We do not receive the form on a server, and we do not store it on this site. We read the note and reply with a scope or with a question. This page does not promise a response time.</p>
-        <!-- Contact address: js/site.js CONTACT_EMAIL -->
-        <p class="plain-mail">Or write directly: <a class="email-link" id="plain-email" data-contact-email></a></p>
+        <p class="lede">The form shows your letter on this page. Open in your mail app is a second click. We do not receive the form on a server, and we do not store it on this site. We read the note and reply with a scope or with a question. This page does not promise a response time.</p>
+        <p class="plain-mail">Or write directly: <a class="email-link" id="plain-email" href="mailto:hello@dataguru.com" data-contact-email>hello@dataguru.com</a></p>
       </div>
+      <noscript>
+        <p class="noscript-note">Without JavaScript, submitting this form opens your email application with the fields you entered. The letter preview on the page needs JavaScript.</p>
+      </noscript>
       <div class="form-layout">
-        <form id="request" data-request-form action="contact.html" method="get">
+        <form id="request" data-request-form action="mailto:hello@dataguru.com" method="get">
           <div class="form-grid">
             <div>
               <label for="name">Name</label>
@@ -80,16 +82,17 @@
               <textarea id="message" name="message" maxlength="1200" required aria-describedby="message-hint"></textarea>
             </div>
             <div class="full">
-              <p class="hint">All fields are required. Submitting uses your email application. DataGuru does not receive this form on the website.</p>
-              <button class="button" type="submit">Prepare email request</button>
+              <p class="hint">All fields are required. The first step shows the letter on this page. DataGuru does not receive this form on the website.</p>
+              <button class="button" type="submit">Show the letter</button>
             </div>
           </div>
           <div class="request-status" data-request-status hidden tabindex="-1" role="status" aria-live="polite">
-            <h2>Email ready</h2>
-            <p>Your email client should open a message to <a class="email-link" data-contact-email></a>. If it does not, use the prepared link. This page did not send or store the note.</p>
-            <p>Subject: <span data-request-subject></span></p>
+            <h2>Your letter</h2>
+            <p>This page did not send or store the note.</p>
+            <p>To: <a class="email-link" href="mailto:hello@dataguru.com" data-contact-email>hello@dataguru.com</a></p>
+            <p class="request-subject">Subject: <span data-request-subject></span></p>
             <pre class="letter" data-request-summary></pre>
-            <a class="button" data-open-mailto href="contact.html">Open the prepared email</a>
+            <a class="button" data-open-mailto href="mailto:hello@dataguru.com">Open in your mail app</a>
           </div>
         </form>
         <aside class="aside-card">
@@ -102,12 +105,12 @@
   </main>
   <footer class="site-footer">
     <div class="shell">
-      <p class="independence">DataGuru is an independent data company and does not claim affiliation with Genius Sports, Sportradar, Betradar, or any league.</p>
       <div class="footer-grid">
-        <div>
+        <div class="footer-lead">
           <p class="footer-name">DataGuru</p>
+          <p><a class="email-link" href="mailto:hello@dataguru.com" data-contact-email>hello@dataguru.com</a></p>
+          <p class="footer-reply">The DataGuru desk replies.</p>
           <p class="footer-tag">Scores and sports data for professional desks.</p>
-          <a class="email-link" data-contact-email></a>
         </div>
         <nav class="footer-nav" aria-label="Footer">
           <a href="index.html">Home</a>
@@ -118,8 +121,9 @@
         </nav>
       </div>
       <p class="copyright">© 2026 DataGuru</p>
+      <p class="independence">DataGuru is an independent data company and does not claim affiliation with Genius Sports, Sportradar, Betradar, or any league.</p>
       <noscript>
-        <p class="noscript-note">Enable JavaScript to show the contact address and to prepare a request email. The address is a single constant in the site script.</p>
+        <p class="noscript-note">The menu button on a narrow screen needs JavaScript. The mailbox link is in the page.</p>
       </noscript>
     </div>
   </footer>

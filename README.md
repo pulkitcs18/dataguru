@@ -20,10 +20,10 @@ Pages:
 - `how-it-works.html` — email, scope, delivery
 - `contact.html` — request form
 
-The request form does not submit to a server. It opens the visitor's email client with the entered fields filled in.
+The request form does not submit to a server. With JavaScript, it shows the composed letter on the page, and a second control opens the visitor's email app. Without JavaScript, the form uses `method="get"` and `action="mailto:hello@dataguru.com"`.
 
 ## Contact address
 
-`hello@dataguru.com` is the placeholder contact address. It is defined once, as `CONTACT_EMAIL` in `js/site.js`. Change that constant to update the plain mailto links and the request form together.
+`hello@dataguru.com` is printed in the HTML and set as `CONTACT_EMAIL` in `js/site.js`. Keep those the same.
 
 Newsreader and Outfit are included under the SIL Open Font License. See `fonts/Newsreader-OFL.txt` and `fonts/Outfit-OFL.txt`.

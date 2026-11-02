@@ -1,6 +1,7 @@
 /**
  * DataGuru marketing site.
- * Change the contact address only in CONTACT_EMAIL.
+ * CONTACT_EMAIL stays hello@dataguru.com.
+ * The same address is printed in the HTML for visitors without JavaScript.
  */
 const CONTACT_EMAIL = "hello@dataguru.com";
 
@@ -165,7 +166,6 @@ function bindRequestForm() {
       status.hidden = false;
       status.focus();
     }
-    window.location.href = mailto;
   });
 }
 

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>DataGuru — Tennis scores and sports data</title>
   <meta name="description" content="DataGuru prepares tennis scores and sports data for professional desks. This year we covered most of the Grand Slams, ATP 1000s, ATP 500s, and WTA 1000s. Request a scope by email.">
-  <meta name="theme-color" content="#10141c">
+  <meta name="theme-color" content="#7eb8e4">
   <link rel="icon" href="favicon.ico" sizes="32x32">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="fonts/newsreader-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
@@ -96,6 +96,45 @@
       </div>
     </div>
 
+    <section class="venue-strip" aria-labelledby="venues-title">
+      <div class="shell">
+        <div class="section-intro">
+          <p class="eyebrow">Stadiums</p>
+          <h2 id="venues-title">Three photographs, still to come.</h2>
+          <p class="lede">Each frame is reserved for a photograph of the stadium. The photo is coming. Nothing here stands in for it.</p>
+        </div>
+        <ul class="venue-list">
+          <li>
+            <figure class="venue-slot">
+              <div class="venue-frame">
+                <img src="assets/photo-coming.svg" alt="Roland-Garros" width="640" height="400">
+                <p class="venue-empty">The photo is coming.</p>
+              </div>
+              <figcaption>Roland-Garros</figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure class="venue-slot">
+              <div class="venue-frame">
+                <img src="assets/photo-coming.svg" alt="US Open" width="640" height="400">
+                <p class="venue-empty">The photo is coming.</p>
+              </div>
+              <figcaption>US Open</figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure class="venue-slot">
+              <div class="venue-frame">
+                <img src="assets/photo-coming.svg" alt="Wimbledon" width="640" height="400">
+                <p class="venue-empty">The photo is coming.</p>
+              </div>
+              <figcaption>Wimbledon</figcaption>
+            </figure>
+          </li>
+        </ul>
+      </div>
+    </section>
+
     <section class="section" aria-labelledby="offer-title">
       <div class="shell">
         <div class="section-intro">
@@ -138,33 +177,29 @@
       </div>
     </section>
 
-    <section class="section band" aria-labelledby="position-title">
+    <section class="section band" aria-labelledby="fields-title">
       <div class="shell">
         <div class="section-intro">
-          <p class="eyebrow">Catalog position</p>
-          <h2 id="position-title">Figures that describe the offer, not a client list.</h2>
-          <p class="lede">These numbers are how DataGuru organizes a request. They are not customer counts, league contracts, or a designation from a governing body.</p>
+          <p class="eyebrow">Inside a file</p>
+          <h2 id="fields-title">What a tennis file holds.</h2>
+          <p class="lede">These are fields a client can ask for. They are not a count of clients, contracts, or sports.</p>
         </div>
-        <dl class="figures">
+        <dl class="file-fields">
           <div>
-            <dt>Flagship sports</dt>
-            <dd>4</dd>
-            <p>Tennis, football, American football, and ice hockey.</p>
+            <dt>Match</dt>
+            <dd>The two players in the encounter.</dd>
           </div>
           <div>
-            <dt>Named beside them</dt>
-            <dd>6</dd>
-            <p>Basketball, baseball, cricket, rugby, golf, and motorsport, with other major sports on request.</p>
+            <dt>Status</dt>
+            <dd>In progress, or a final result.</dd>
           </div>
           <div>
-            <dt>Data families</dt>
-            <dd>5</dd>
-            <p>Scores, fixtures, live events, reference, and historical results.</p>
+            <dt>Score</dt>
+            <dd>Sets and games when the scope includes them.</dd>
           </div>
           <div>
-            <dt>Steps to a file</dt>
-            <dd>3</dd>
-            <p>You write. We scope. We deliver. Nothing is ordered from a cart.</p>
+            <dt>Event</dt>
+            <dd>One in-play action, such as an ace, a game, or a tiebreak.</dd>
           </div>
         </dl>
       </div>
@@ -268,12 +303,12 @@
   </main>
   <footer class="site-footer">
     <div class="shell">
-      <p class="independence">DataGuru is an independent data company and does not claim affiliation with Genius Sports, Sportradar, Betradar, or any league.</p>
       <div class="footer-grid">
-        <div>
+        <div class="footer-lead">
           <p class="footer-name">DataGuru</p>
+          <p><a class="email-link" href="mailto:hello@dataguru.com" data-contact-email>hello@dataguru.com</a></p>
+          <p class="footer-reply">The DataGuru desk replies.</p>
           <p class="footer-tag">Tennis scores and sports data for professional desks.</p>
-          <a class="email-link" data-contact-email></a>
         </div>
         <nav class="footer-nav" aria-label="Footer">
           <a href="index.html" aria-current="page">Home</a>
@@ -284,8 +319,9 @@
         </nav>
       </div>
       <p class="copyright">© 2026 DataGuru</p>
+      <p class="independence">DataGuru is an independent data company and does not claim affiliation with Genius Sports, Sportradar, Betradar, or any league.</p>
       <noscript>
-        <p class="noscript-note">Enable JavaScript to show the contact address and to prepare a request email. The address is a single constant in the site script.</p>
+        <p class="noscript-note">The menu button on a narrow screen needs JavaScript. The mailbox link is in the page.</p>
       </noscript>
     </div>
   </footer>
